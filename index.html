@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navContainer">
+                <div class="navbar">
+                    <h1>Yukidesu</h1>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#button-reserve">Book</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <header id="home">
+                <h1 id="home"><span class="header">Authentic Japanese Food</span></h1>
+                <h1 class="subtext">Now Serving Near YOU</h1> 
+            </header>
+           
+            <section id="about">
+                <div class="about-container">
+                    <h1>Yukidesu Restaurant</h1>
+                    <p>Dine and eat authentic japanese food made from fresh quality ingredients shipped from Japan. Serving your Classic Japanese favorites like:</p>
+                    <ul>
+                        <li>Takoyaki</li>
+                        <li>Ramen</li>
+                        <li>Tonkatsu</li>
+                        <li>And many more!</li>
+                    </ul>
+
+                </div>
+                <div class="pics-container">
+                    <div class="pic1 pic"></div>
+                    <div class="pic2 pic"></div>
+                    <div class="pic3 pic"></div>
+                    <div class="pic4 pic"></div>
+                </div>
+                
+             </section>
+
+             <section id="locations">
+                <h1 class="header">Our Locations</h1>
+                <div class="locations-list">
+                    <div id="tarlac" class="location">
+                        <div class="content">
+                            <h2>Tarlac City, Tarlac</h2>
+                            <p>Brgy. San Rafael</p>
+                        </div>
+                    </div>
+                    <div id="capas" class="location">
+                        <div class="content">
+                            <h2>Capas, Tarlac</h2>
+                            <p>Brgy. Talaga</p>
+                        </div>
+                    </div>
+                    <div id="gerona" class="location">
+                        <div class="content">
+                            <h2>Gerona, Tarlac</h2>
+                            <p>Brgy. Amacalan</p>
+                        </div>
+                    </div>
+                        
+                    <div id="mabalacat" class="location">
+                        <div class="content">
+                            <h2>Mabalacat, Pampanga</h2>
+                            <p>Brgy. Atlu-Bola</p>
+                        </div>
+                    </div>
+                    <div id="meycauayan" class="location">
+                        <div class="content">
+                            <h2>Meycauayan, Bulacan</h2>
+                            <p>Brgy. Poblacion</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="schedules">
+                 <h1 class="header">We are open!</h1>
+
+                 <table>
+                    <tr>
+                        <th>Weekdays</th>
+                        <th>Weekends</th>
+                    </tr>
+                    <tr>
+                        <td>10:00am - 11:00pm</td>
+                        <td>11:00am - 10:00pm</td>
+                    </tr>
+
+                 </table>
+
+                 <script src="index.js"></script>
+
+                 <div id="book" class="form-book">
+                    <form action="">
+                        <h2>Book Reservation</h2>
+                        <label>Name</label> <br>
+                        <input type="text" name="name"> <br>
+                        <label>Table for (Persons)</label>
+                        <select name="table" id="table"> 
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="8">8</option>
+                            <option value="16">16</option>
+                        </select> <br>
+                        <label>Reservation Date</label> <br>
+                        <input type="date" name="name"> <br>
+                        <label>Reservation Time</label> <br>
+                        <input type="time" name="name"> <br>
+                        <label>Contact No.</label> <br>
+                        <input type="number" name="name"> <br>
+
+                        <div class="button-panel">
+                            <button id="cancel" >Cancel</button>
+                            <button id="submit" >Submit</button>
+                        </div>
+                    </form>
+                 </div>
+
+                 <button id="button-reserve">Book Reservation</button>
+             </section>
+ 
+             <footer id="contact">
+                <h1 class="header">Contact Us</h1>
+                <div class="contact-details">
+                    <details>
+                        <summary>Tarlac City, Tarlac</summary>
+                        <ul>
+                            <li>Contact no: 09091236789</li>
+                            <li>Email: yukidesuTCT@gmail.com</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Capas, Tarlac</summary>
+                        <ul>
+                            <li>Contact no: 09097891234</li>
+                            <li>Email: yukidesuCT@gmail.com</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Gerona, Tarlac</summary>
+                        <ul>
+                            <li>Contact no: 09153456969</li>
+                            <li>Email: yukidesuGT@gmail.com</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Mabalacat, Pampanga</summary>
+                        <ul>
+                            <li>Contact no: 09694201234</li>
+                            <li>Email: yukidesuMP@gmail.com</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Meycauayan, Bulacan</summary>
+                        <ul>
+                            <li>Contact no: 09421352468</li>
+                            <li>Email: yukidesuMB@gmail.com</li>
+                        </ul>
+                    </details>
+                </div>
+                    
+                 <p>© 2023 Yukidesu - All Rights Reserved. || Designed by: Errol</p>
+             </footer>
+        </div>
+      
+    </body>
+</html>
