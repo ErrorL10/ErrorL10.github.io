@@ -175,6 +175,32 @@ html{
 
 }
 
+.playback{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    margin: 2em 0;
+
+    & video {
+        width: 70%;
+    }
+
+    & h1 {
+        text-align: center;
+        margin: 0.5em;
+        font-size: 40px;
+    }
+
+    & h2 {
+        font-size: 32px;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+}
+
 
 .pic1{
     background-color: red;
@@ -507,6 +533,17 @@ html{
             }
         }
     }
+
+    .playback {
+
+        & video {
+            width: 80%;
+        }
+
+        & h1 {
+            font-size: 32px;
+        }
+    }
     
     #schedules {
 
@@ -612,6 +649,17 @@ html{
                 width: 200px;
                 height: 200px;
             }
+        }
+    }
+
+    .playback {
+
+        & video {
+            width: 80%;
+        }
+
+        & h1 {
+            font-size: 36px;
         }
     }
 
