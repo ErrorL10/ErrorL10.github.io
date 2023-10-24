@@ -21,6 +21,7 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
 .navbar {
@@ -305,7 +306,6 @@ html{
 
     & table{
         color: #EEEEEE;
-        margin: 1em;
         text-align: center;
         padding: 1.5em;
     }
