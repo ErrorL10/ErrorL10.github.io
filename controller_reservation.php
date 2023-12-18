@@ -16,63 +16,44 @@
 <body>
     <?php
         // insert statement
-        if(isset($_POST['add_user'])){ 
+        if(isset($_POST['book'])){ 
+            
             $name = $_POST['name'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+            $date = $_POST['date'];
+            $time = $_POST['time'];
+            $table_select = $_POST['table-select'];
+            $contact = $_POST['contact_no'];
 
-            $sql = "INSERT INTO `users`(`name`, `email`, `password`) VALUES ( ? , ? , ?)";
+            $sql = "INSERT INTO `reservations` (`full_name`, `table_for`, `reservation_date`, `reservation_time`, `contact_no`) VALUES (?, ?, ?, ?, ?)";
             $stmt=$con->prepare($sql);
-            $stmt->bind_param("sss", $name, $email, $password);        
+            $stmt->bind_param("sssss", $name, $table_select, $date, $time, $contact);        
             if($stmt->execute()){ ?>
                 <script type="text/javascript">
                     swal("Success!", "Information has been added.", "success")
                     .then(function(){
-                    window.location="login.php";
+                    window.location="index.html";
                 });
                 </script>
 
     <?php }
-        // select statement
-        } if(isset($_POST['login'])){
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-    
-            $sql="SELECT * FROM users WHERE email = ? AND password = ?";
-            $stmt=$con->prepare($sql);
-            $stmt->bind_param("ss", $email, $password);
-            $stmt->execute();
-            $result=$stmt->get_result();
-            $row=$result->fetch_assoc();
-    
-            if($result->num_rows==1){
-                header("location: admin.php");
-            }else{?>
-                <script type="text/javascript">
-                    swal("Login Failed!", "Incorrect Email or Paswword", "error")
-                    .then(function(){
-                    window.location="login.php";
-                });
-                </script>
+        } 
 
-            <?php 
-
-            }
-        }
         if(isset($_POST['update'])){
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
             $id = $_POST['id'];
+            $name = $_POST['name'];
+            $date = $_POST['date'];
+            $time = $_POST['time'];
+            $table_select = $_POST['table-select'];
+            $contact = $_POST['contact'];
 
-            $sql="UPDATE `users` SET `name` = ?, `email` = ?, `password` = ? WHERE user_id = ?";
+            $sql="UPDATE `reservations` SET `full_name` = ?, `table_for` = ?, `reservation_date` = ?, `reservation_time` = ?, `contact_no` = ? WHERE reservation_id = ?";
             $stmt=$con->prepare($sql);
-            $stmt->bind_param("ssss", $name, $email, $password, $id);
+            $stmt->bind_param("ssssss", $name, $table_select, $date, $time, $contact, $id);
             if($stmt->execute()){ ?>
                 <script type="text/javascript">
                     swal("Success!", "Information has been updated.", "success")
                     .then(function(){
-                    window.location="admin_users.php";
+                    window.location="admin.php";
                 });
                 </script>
 
@@ -80,14 +61,14 @@
         }if(isset($_POST['delete'])){
             $id = $_POST['id'];
             
-            $sql="DELETE FROM users WHERE user_id = ?";
+            $sql="DELETE FROM reservations WHERE reservation_id = ?";
             $stmt=$con->prepare($sql);
             $stmt->bind_param("s", $id);
             if($stmt->execute()){ ?>
                 <script type="text/javascript">
                     swal("Success!", "Information has been deleted.", "success")
                     .then(function(){
-                    window.location="admin_users.php";
+                    window.location="admin.php";
                 });
                 </script>
 

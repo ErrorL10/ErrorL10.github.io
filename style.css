@@ -475,6 +475,28 @@ html{
     padding-top: 1em;
 }
 
+/* Forms */
+
+.form-group{
+    width: 30vw;
+    height: 10vh;
+  }
+  
+  label{
+    font-size: 1.25rem;
+    font-weight: 500;
+  
+  }
+  input{
+    height: 6vh;
+  }
+
+  .form-button{
+    width: 10vw;
+    height: 6vh;
+    margin-top: 10px;
+  }
+
 
 @media screen and (max-device-width: 480px) {
 
@@ -554,7 +576,7 @@ html{
             font-size: 16px;
         }
 
-        & button {
+        & a {
             font-size: 20px;
             width: 80%;
         }
@@ -664,7 +686,7 @@ html{
 
     #schedules {
 
-        & button {
+        & a {
             padding: 0.75rem 3rem;
             font-size: 3vw;
             width: 40%;

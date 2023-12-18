@@ -17,7 +17,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#locations">Locations</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="admin.php">Book</a></li>
+                        <li><a href="book_reservation.php">Book</a></li>
                     </ul>
                 </div>
             </div>
@@ -104,33 +104,17 @@
                     </tr>
                  </table>
                  <script src="index.js"></script>
-                 <div id="book" class="form-book">
-                    <form action="">
-                        <h2>Book Reservation</h2>
-                        <label>Name</label> <br>
-                        <input type="text" name="name"> <br>
-                        <label>Table for (Persons)</label>
-                        <select name="table" id="table"> 
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="4">4</option>
-                            <option value="8">8</option>
-                            <option value="16">16</option>
-                        </select> <br>
-                        <label>Reservation Date</label> <br>
-                        <input type="date" name="name"> <br>
-                        <label>Reservation Time</label> <br>
-                        <input type="time" name="name"> <br>
-                        <label>Contact No.</label> <br>
-                        <input type="number" name="name"> <br>
+                 
+                 <p class="details" style="color: #eeeeee;">Click the Book Button on the Top-left side to book a reservation!</p>
+                 <p class="details" style="color: #eeeeee;">Optionally, You can ask a staff to do it for you!</p>
+                 <button id="staff-login">Staff Login</button>
 
-                        <div class="button-panel">
-                            <button id="cancel" >Cancel</button>
-                            <button id="submit" >Submit</button>
-                        </div>
-                    </form>
-                 </div>
-                 <button id="button-reserve">Book Reservation</button>
+                 <script type="text/javascript">
+                    document.getElementById("staff-login").onclick = function () {
+                        location.href = "login.php";
+                    };
+                </script>
+                 
              </section>
              <footer id="contact">
                 <h1 class="header">Contact Us</h1>
